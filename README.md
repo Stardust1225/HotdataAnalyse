@@ -16,8 +16,8 @@
 ### 1.2.2 获取和储存机制
 根据微博实时热搜榜的更新说明，我们需要每1分钟获取一次热搜数据。为了避免被封锁，对获取时间进行调整，每次获取的时间间隔为60s±3s。每次获取后写入一个单独的文件。  
 
-### 1.2.3 数据爬取源代码（java版）
-      
+### 1.2.3 数据爬取源代码（java版）  
+'''
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -122,4 +122,6 @@ public class Main {
             nextStart=dataStr.indexOf("\\u" , start+2);
         }
         return buffer.toString();
-
+    }
+}
+'''
