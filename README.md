@@ -8,4 +8,6 @@
 # 1.2 数据搜集  
 &emsp;按照微博实时热搜榜的更新机制，我们每一分钟对微博热搜榜进行数据爬取，取出其中的热搜条目和热搜次数，并进行存储。
 ## 1.2.1 html处理  
-&emsp;微博热搜榜的网址为[链接到sina](http://s.weibo.com/top/summary?cate=realtimehot)，每分钟获取该网页对应的html数据，并找到显示热搜榜的代码段，如上图所示，50个热搜在<tbody>标签中，每一个热搜对应了一个<tr action-type=hover></tr>。其中，热搜条目对应了td_02，热搜次数对应了td_03。将这两部分内容进行储存。热搜条目所对应的数据为Unicode编码，需要转换为utf-8编码。
+&emsp;微博热搜榜的网址为[链接到sina](http://s.weibo.com/top/summary?cate=realtimehot)，每分钟获取该网页对应的html数据，并找到显示热搜榜的代码段，
+![Alt text](1.png "热搜网站代码分析")
+如上图所示，50个热搜在<tbody>标签中，每一个热搜对应了一个<tr action-type=hover></tr>。其中，热搜条目对应了td_02，热搜次数对应了td_03。将这两部分内容进行储存。热搜条目所对应的数据为Unicode编码，需要转换为utf-8编码。
